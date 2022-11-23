@@ -1,88 +1,154 @@
-# KS BootShop - Shopify Theme
-Shopify Starter Theme powered by Bootstrap framework (v5), developed respecting [Shopify themes requirements](https://shopify.dev/tutorials/review-theme-store-requirements), accessibility best practices, and of course our own experience in developing themes for more than 15 years now.
+About PrestaShop
+--------
 
-Our goal is to make this project the most completed, robust and of course the most awesome Shopify theme for the Bootstrap framework.
+[![PHP checks and unit tests](https://github.com/PrestaShop/PrestaShop/actions/workflows/php.yml/badge.svg)](https://github.com/PrestaShop/PrestaShop/actions/workflows/php.yml)
+[![Integration tests](https://github.com/PrestaShop/PrestaShop/actions/workflows/integration.yml/badge.svg)](https://github.com/PrestaShop/PrestaShop/actions/workflows/integration.yml)
+[![UI tests](https://github.com/PrestaShop/PrestaShop/actions/workflows/sanity.yml/badge.svg)](https://github.com/PrestaShop/PrestaShop/actions/workflows/sanity.yml)
+[![Nightly Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fapi-nightly.prestashop.com%2Fdata%2Fbadge&label=Nightly%20Status&cacheSeconds=3600)](https://nightly.prestashop.com/)
 
-## Video introduction
-Click on the screenshot below to play the video on Youtube.
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.2-8892BF.svg?style=flat-square)](https://php.net/)
+[![GitHub release](https://img.shields.io/github/v/release/prestashop/prestashop)](https://github.com/PrestaShop/PrestaShop)
+[![Slack chat](https://img.shields.io/badge/Chat-on%20Slack-red)](https://github.com/PrestaShop/open-source/blob/master/slack/readme.md)
+[![GitHub forks](https://img.shields.io/github/forks/PrestaShop/PrestaShop)](https://github.com/PrestaShop/PrestaShop/network)
+[![GitHub stars](https://img.shields.io/github/stars/PrestaShop/PrestaShop)](https://github.com/PrestaShop/PrestaShop/stargazers)
 
-[<img src="https://img.youtube.com/vi/_G9IRSFAI_A/maxresdefault.jpg" width="50%">](https://youtu.be/_G9IRSFAI_A)
+PrestaShop is an Open Source e-commerce web application, committed to providing the best shopping cart experience for both merchants and customers. It is written in PHP, is highly customizable, supports all the major payment services, is translated in many languages and localized for many countries, has a fully responsive design (both front and back office), etc. [See all the available features][available-features].
 
-## Highlighted features:
-* Powered by [Bootstrap framework](https://getbootstrap.com/) (v5)
-* Developed respecting [Shopify themes requirements](https://shopify.dev/tutorials/review-theme-store-requirements)
-* All elements are fully accessible with [aria attributes](https://www.w3.org/WAI/standards-guidelines/aria/)
-* No Javascript framework dependencies (e.g jQuery)
-* Support for [native image lazy-loading](https://web.dev/native-lazy-loading/)
-* PageSeed score 96/100 [check results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fks-bootshop.myshopify.com%2F&tab=desktop) 
-* All Shopify required homepage sections (~20)
-* All Shopify templates (cart, product, etc) have their corresponding settings
-* Product layout option grid or list
-* Ajax add to cart
-* Recommended products section [Learn more](https://shopify.dev/tutorials/develop-theme-recommended-products)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/2137763/201319765-9157f702-4970-4258-8390-1187de2ad587.png" alt="PrestaShop 8.0 back office"/>
+</p>
 
-## Homepage sections
-* Carousel
-* Featured Products
-* Featured Collections
-* Cards with image
-* Video
-* Contact Form
-* F.A.Q
-* HTML
-* Image with text
-* Newsletter
-* Richtext
-* Separator
+This repository contains the source code of PrestaShop, which is intended for development and preview only. To download the latest stable public version of PrestaShop (currently, version 8.0), please go to [the releases page][download].
 
-## Demo 
-https://ks-bootshop.myshopify.com/
 
-## Download 
-Go to [Releases](https://github.com/kondasoft/ks-bootshop/releases/) and get the latest v3.x.x version which is ready for Bootstrap v5.
+About the 'develop' branch
+--------
 
-## Premium Shopify Themes 
-In case you are interested in our Premium Shopify Themes with advanced features to increase your store conversion rates (CVR) and average order value (AOV), please visit our website
-https://www.kondasoft.com
+The 'develop' branch of this repository contains the work in progress source code for the next version of PrestaShop.
+ 
+For more information on our branch system, read our guide on [installing PrestaShop for development][install-guide-dev].
 
-## Installation
-**Note:** Please, make sure you are familiar with [Theme kit](https://shopify.github.io/themekit/), official documentation before proceeding. We are assuming that at this point you have already installed Theme Kit.
+The first stable version of PrestaShop 8.0, was released on October 26th, 2022. Further updates have been released since then. Learn more about it on [the Build devblog](https://build.prestashop-project.org/tag/8.0/).
 
-### 1- Clone this repository (download theme files)
-Create a new folder on your computer, `cd` to it and run the following command to copy all theme files from our GitHub repository master branch. Note: Include the dot at the end of the command to clone into your current directory.
+Server configuration
+--------
 
-`git clone https://github.com/kondasoft/ks-bootshop .`
+To install the latest PrestaShop 8.0, you need a web server running PHP 7.2+ and any flavor of MySQL 5.0+ (MySQL, MariaDB, Percona Server, etc.).
 
-### 2- Create and configure theme with Theme Kit
-Run the following command to create a new theme in your Shopify store along with our theme files that you have just downloaded:
+You will also need a database administration tool, such as phpMyAdmin, in order to create a database for PrestaShop.
+We recommend the Apache or Nginx web servers (check out our [example Nginx configuration file][example-nginx]).
 
-`theme new --password=[your-api-password] --store=[your-store.myshopify.com] --name="ks-bootshop-v3"`
+You can find more information on our [System requirements][system-requirements] page and on the [System Administrator Guide][sysadmin-guide].
 
-Optional: Run this command to open your shopify store with our theme in preview mode.
+Installation
+--------
 
-`theme open`
+If you downloaded the source code from GitHub, read our guide on [installing PrestaShop for development][install-guide-dev]. If you intend to install a production shop, make sure to download the latest version from [our releases page][download], then read the [install guide for users][install-guide].
 
-## Customization
-It is advised to not directly modify theme files as you will lose changes when you upgrade our theme. The recommended way to handle this is by creating a copy of our theme and then modify it. Please follow this [official tutorial](https://help.shopify.com/en/manual/online-store/legacy/using-themes/managing-themes/duplicating-themes) to learn more. 
+Docker compose
+--------
 
-Also, we have provided 2 blank files (`custom.css` and `custom.js`) which are inside the `assets` folder. It is recommended that you use these 2 files to add your styles and scripts since they will not be changed during the upgrade.
+PrestaShop can also be deployed with Docker and its tool [Docker compose][docker-compose].
 
-### Modifying styles (SCSS)
-We have provided only a few additional styling for this Shopify theme, and all of those are done via plain CSS in the `assets` folder. Our goal for this theme is to provide a solid foundation, completely backed by the Bootstrap framework, so that you can easily get it going with the framework you already know and love. 
+To run the software, use:
 
-All bootstrap related styles and variables are in `src/bootstrap.scss` file. Assuming that you already know how to work with [Bootstrap variables](https://getbootstrap.com/docs/5.1/customize/overview/), feel free to modify this file, especially the color variables in the top of the file.
+```
+docker-compose up
+```
 
-After that, install all the needed npm packages that are already defined in the `packages.json` file
-`npm install`
+Then reach your shop on this URL: http://localhost:8001
 
-Now, you can compile the `bootstrap.scss` file that you have just modified using with the following command:
-`npm run bs-css` or `npm run watch` (to continuously watch for changes)
+Docker will bind your port 8001 to the web server. If you want to use other port, open and modify the file `docker-compose.yml`.
+MySQL credentials can also be found and modified in this file if needed.
 
-To deploy your changes on your Shopify store run the following Theme Kit command:
-`theme deploy` or: `theme watch`
+**Note:**  Before auto-installing PrestaShop, this container checks the file *config/settings.inc.php* does not exist on startup.
+If you expect the container to (re)install your shop, remove this file if it exists. And make sure the container user `www-data` 
+has write access to the whole workspace.
 
-## Support
-Please submit a [new issue](https://github.com/kondasoft/ks-bootshop/issues/new) in case you want to submit a bug or feature request. Additionally, you may visit our [website](https://www.kondasoft.com/) for further help.
+Documentation
+--------
 
-## Copyright and license
-Copyright 2022 [kondasoft.com](https://www.kondasoft.com). Code released under the [MIT License](https://github.com/kondasoft/ks-bootshop/blob/master/LICENSE).
+For technical information (core, module and theme development, performance...), head on to [PrestaShop DevDocs][devdocs]
+
+If you want to learn how to use PrestaShop 8.0, read our [User documentation][user-doc].
+
+First-time users will be particularly interested in the following guides:
+
+* [Getting Started][getting-started]: How to install PrestaShop, and what you need to know.
+* [User Guide][user-guide]: All there is to know to put PrestaShop to good use.
+* [Updating Guide][updating-guide]: Switching to the newest version is not trivial. Make sure you do it right.
+* [Merchant's Guide][merchant-guide]: Tips and tricks for first-time online sellers.
+* The [FAQ][faq-17] page should also be of tremendous help to you.
+
+
+Contributing
+--------
+
+PrestaShop is an Open Source project, and it wouldn't be possible without the help of the [hundreds of contributors][contributors-md], who submitted improvements and bugfixes over the years. Thank you all!
+
+If you want to contribute code to PrestaShop, read the [CONTRIBUTING.md][contributing-md] file in this repository or read the [tutorials about contribution][contributing-tutorial] on the documentation site.
+
+Don't know where to start? Check the [good first issue](https://github.com/PrestaShop/PrestaShop/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) label to have a look at all beginner-friendly improvements and bug fixes.
+
+If you want to help translate PrestaShop in your language, [join us on Crowdin][crowdin]!
+
+Current Crowdin status (for more than 75 registered languages): [![Crowdin](https://crowdin.net/badges/prestashop-official/localized.png)](https://crowdin.net/project/prestashop-official)
+
+Reporting Issues
+--------
+
+Our bugtracker is on GitHub. We encourage you to [create detailed issues][create-issue] as soon as you see them.
+
+Read our [Contribute by reporting issues guide][reporting-issues] for details and tips.
+
+
+Reporting Security Issues
+--------
+
+Responsible (and private) disclosure is a standard practice when someone encounters a security problem: before making it public, the discoverer informs the Core team about it, so that a fix can be prepared, and thus minimize the potential damage.
+
+The PrestaShop team tries to be very proactive when preventing security problems. Even so, critical issues might surface without notice.
+
+This is why we have set up a [Bug Bounty Program](https://yeswehack.com/programs/prestashop) where anyone can privately contact us with all the details about issues that affect the security of PrestaShop merchants or customers. Our security team will answer you, and discuss of a timeframe for your publication of the details.
+
+Understanding a security issue means knowing how the attacker got in and hacked the site. If you have those details, then please do contact us privately about it (and please do not publish those details before we answer). If you do not know how the attacker got in, please ask for help on the support forums.
+
+
+Extending PrestaShop
+--------
+
+PrestaShop is a very extensible e-commerce platform, both through modules and themes. Developers can even override the default components and behaviors. Learn more about this on the [Modules documentation][modules-devdocs] and the [Themes documentation][themes-devdocs].
+
+
+Community forums
+--------
+
+You can discuss about e-commerce, help other merchants and get help, and contribute to improving PrestaShop together with the PrestaShop community on [PrestaShop Slack channel][chat] or on the [the PrestaShop forums][forums].
+
+Thank you for downloading and using the PrestaShop Open Source e-commerce solution!
+
+[available-features]: https://www.prestashop.com/en/online-store-builder
+[download]: https://github.com/PrestaShop/PrestaShop/releases
+[forums]: https://www.prestashop.com/forums/
+[chat]: https://www.prestashop-project.org/slack/
+[user-doc]: https://docs.prestashop-project.org
+[contributing-md]: CONTRIBUTING.md
+[contributing-tutorial]: https://devdocs.prestashop-project.org/8/contribute/
+[crowdin]: https://crowdin.net/project/prestashop-official
+[getting-started]: https://docs.prestashop-project.org/1.7-documentation/getting-started
+[user-guide]: https://docs.prestashop-project.org/v.8-documentation/v/english/user-guide
+[updating-guide]: https://docs.prestashop-project.org/1-6-documentation/english-documentation/updating-prestashop
+[merchant-guide]: https://docs.prestashop-project.org/1-6-documentation/english-documentation/merchants-guide
+[faq-17]: https://devdocs.prestashop-project.org/8/faq/
+[sysadmin-guide]: https://docs.prestashop-project.org/1-6-documentation/english-documentation/system-administrator-guide
+[contributors-md]: CONTRIBUTORS.md
+[example-nginx]: https://devdocs.prestashop-project.org/8/basics/installation/nginx/
+[docker-compose]: https://docs.docker.com/compose/
+[install-guide-dev]: https://devdocs.prestashop-project.org/8/basics/installation/
+[system-requirements]: https://devdocs.prestashop-project.org/8/basics/installation/system-requirements/
+[install-guide]: https://docs.prestashop-project.org/v.8-documentation/v/english/getting-started/installing-prestashop
+[devdocs]: https://devdocs.prestashop-project.org/
+[create-issue]: https://github.com/PrestaShop/PrestaShop/issues/new/choose
+[reporting-issues]: https://devdocs.prestashop-project.org/8/contribute/contribute-reporting-issues/
+[modules-devdocs]: https://devdocs.prestashop-project.org/8/modules/
+[themes-devdocs]: https://devdocs.prestashop-project.org/8/themes/
